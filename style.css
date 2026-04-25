@@ -1,0 +1,288 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  background: white;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  font-size: 18px; /* avant petit */
+  font-weight: bold;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MENU */
+.menu-btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 35px;
+}
+
+.logo span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ICONS */
+.icons {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: none;
+  margin-top: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* HERO */
+.hero {
+  background: url("images/accueil.png") center/cover no-repeat;
+  height: 320px;
+
+  position: relative;
+  overflow: hidden; /* 👈 TRÈS IMPORTANT */
+}
+
+/* OVERLAY (BLEU COMMENCE AU MILIEU) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 40, 90, 0.95) 0%,
+    rgba(0, 40, 90, 0.85) 60%,
+    rgba(0, 40, 90, 0) 100%
+  );
+
+  color: white;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box; /* 👈 IMPORTANT */
+}
+
+/* TEXTE */
+.overlay h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+}
+
+.overlay p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* BOUTON ORANGE */
+.orange {
+  background: #ff8c00;
+}
+
+/* BOUTON WHATSAPP */
+.dark {
+  border: 1px solid white;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 👈 4 colonnes */
+  gap: 8px;
+  padding: 10px;
+}
+.feature-box {
+  padding: 10px;
+}
+
+.icon {
+  font-size: 20px; /* plus petit */
+}
+
+.feature-box h3 {
+  font-size: 11px;
+}
+
+/* CONTAINER */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+
+/* EACH BLOCK */
+.feature {
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+/* BLUE SEPARATOR LINE */
+.feature:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 2px;
+  height: 60%;
+  background: #0d3b66; /* 👈 bleu */
+}
+
+/* ICON */
+.icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #0d3b66;
+}
+
+/* TITLE */
+.feature h3 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* TEXT */
+.feature p {
+  font-size: 10px;
+  color: gray;
+}
+
+/* CATEGORIES */
+.categories {
+  padding: 20px 15px;
+}
+
+.categories h2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 centre tout */
+
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+  width: 80%;            /* 👈 réduit taille */
+  max-width: 150px;      /* 👈 limite */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;        /* 👈 centre */
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+/* LINK */
+.card a {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+/* IMAGE CONTAINER FIX */
+.card img {
+  width: 100%;
+  max-width: 150px;
+  height: 120px;        /* 👈 hauteur fixe */
+  object-fit: contain;  /* 👈 garde proportions */
+  margin: 0 auto;
+  display: block;
+}
+/* TOP 3 CARDS */
+.grid .card:nth-child(1),
+.grid .card:nth-child(2),
+.grid .card:nth-child(3) {
+  grid-column: span 2; /* 6 / 3 = 2 each */
+}
+
+/* LAST 2 CARDS (BIGGER) */
+.grid .card:nth-child(4),
+.grid .card:nth-child(5) {
+  grid-column: span 3; /* 👈 BIGGER */
+}
