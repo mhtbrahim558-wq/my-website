@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fournitures Scolaires — ETS Mahamat Al Amine Adam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<header class="header">
+  <div class="top-bar">
+    <button class="menu-btn" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+    <div class="logo">
+      <div class="logo-fallback">ETS</div>
+      <span>ETS MAHAMAT AL AMINE ADAM</span>
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <span class="search-icon-inner"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" id="searchInput" placeholder="Rechercher un produit, une marque...">
+  </div>
+  <div id="searchResults"></div>
+</header>
+<nav class="dropdown-menu" id="dropdownMenu">
+  <div class="menu-header">
+    <div class="menu-logo"><div class="menu-logo-badge">ETS</div><span>ETS MAHAMAT<br>AL AMINE ADAM</span></div>
+    <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul>
+    <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span>Accueil</a></li>
+    <li><a href="ordinateurs.html"><span class="nav-icon"><i class="fa-solid fa-laptop"></i></span>Ordinateurs</a></li>
+    <li><a href="imprimantes.html"><span class="nav-icon"><i class="fa-solid fa-print"></i></span>Imprimantes</a></li>
+    <li><a href="fournitures.html" class="active-link"><span class="nav-icon"><i class="fa-solid fa-pencil"></i></span>Fournitures Scolaires</a></li>
+    <li><a href="accessoires.html"><span class="nav-icon"><i class="fa-solid fa-computer-mouse"></i></span>Accessoires</a></li>
+    <li><a href="registres.html"><span class="nav-icon"><i class="fa-solid fa-book"></i></span>Livres &amp; Registres</a></li>
+    <li><a href="contacts.html"><span class="nav-icon"><i class="fa-solid fa-phone"></i></span>Contact</a></li>
+  </ul>
+  <div class="menu-social">
+    <a href="https://facebook.com/Ibrahim%20Mahamat%20Al%20Amine" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/ibra.alamine7" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com/add/ibra_alamine7" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+    <a href="https://wa.me/23566322486" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Fournitures</span></div>
+  <div class="page-title-main">Fournitures Scolaires</div>
+  <div class="page-subtitle">Tout pour la rentrée et le quotidien scolaire</div>
+</div>
+<div class="product-count" id="productCount" style="padding:14px 16px 4px;"></div>
+<div class="products-list">
+  <a href="produit.html?name=Cahier%20200%20pages&price=2000&img=images/cahier.jfif&desc=Grand%20format%2C%20lignes&cat=fourniture&brand=Oxford" class="product-card product-card-item" data-brand="oxford">
+    <div class="product-img-wrap">
+      <img src="images/cahier.jfif" alt="Cahier 200 pages" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">OXFORD</div>
+      <div class="product-name">Cahier 200 pages</div>
+      <div class="product-specs">Grand format, lignes</div>
+      <div class="product-footer">
+        <div class="product-price">2 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Stylo%20BIC%20%28pack%29&price=1500&img=images/stylos.jfif&desc=Bleu%2C%20noir%2C%20rouge&cat=fourniture&brand=BIC" class="product-card product-card-item" data-brand="bic">
+    <div class="product-img-wrap">
+      <img src="images/stylos.jfif" alt="Stylo BIC (pack)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">BIC</div>
+      <div class="product-name">Stylo BIC (pack)</div>
+      <div class="product-specs">Bleu, noir, rouge</div>
+      <div class="product-footer">
+        <div class="product-price">1 500<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Sac%20%C3%A0%20dos%20scolaire&price=15000&img=images/sac.jfif&desc=R%C3%A9sistant%2C%20multi-poches&cat=fourniture&brand=Generic" class="product-card product-card-item" data-brand="generic">
+    <div class="product-img-wrap">
+      <img src="images/sac.jfif" alt="Sac à dos scolaire" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Sac à dos scolaire</div>
+      <div class="product-specs">Résistant, multi-poches</div>
+      <div class="product-footer">
+        <div class="product-price">15 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Crayons%20HB%20%28pack%29&price=1000&img=images/crayons.jfif&desc=%C3%89criture%20et%20dessin&cat=fourniture&brand=Faber-Castell" class="product-card product-card-item" data-brand="faber">
+    <div class="product-img-wrap">
+      <img src="images/crayons.jfif" alt="Crayons HB (pack)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">FABER-CASTELL</div>
+      <div class="product-name">Crayons HB (pack)</div>
+      <div class="product-specs">Écriture et dessin</div>
+      <div class="product-footer">
+        <div class="product-price">1 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=R%C3%A8gle%2030cm&price=800&img=images/regle.jfif&desc=Plastique%20solide&cat=fourniture&brand=Maped" class="product-card product-card-item" data-brand="maped">
+    <div class="product-img-wrap">
+      <img src="images/regle.jfif" alt="Règle 30cm" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">MAPED</div>
+      <div class="product-name">Règle 30cm</div>
+      <div class="product-specs">Plastique solide</div>
+      <div class="product-footer">
+        <div class="product-price">800<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Calculatrice%20scientifique&price=12000&img=images/calculatrice.jfif&desc=Fonctions%20avanc%C3%A9es&cat=fourniture&brand=Casio" class="product-card product-card-item" data-brand="casio">
+    <div class="product-img-wrap">
+      <img src="images/calculatrice.jfif" alt="Calculatrice scientifique" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">✏️</div><span class="product-badge new">Scientifique</span>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">CASIO</div>
+      <div class="product-name">Calculatrice scientifique</div>
+      <div class="product-specs">Fonctions avancées</div>
+      <div class="product-footer">
+        <div class="product-price">12 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+</div><footer class="footer">
+  <div class="footer-logo">ETS MAHAMAT AL AMINE ADAM</div>
+  <div class="footer-sub">Informatique &amp; Fournitures — N'Djamena, Tchad</div>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a><a href="ordinateurs.html">Ordinateurs</a><a href="imprimantes.html">Imprimantes</a><a href="accessoires.html">Accessoires</a><a href="contacts.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2025 ETS Mahamat Al Amine Adam. Tous droits réservés.</div>
+</footer><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const products = document.querySelectorAll(".product-card-item");
+  document.getElementById("productCount").innerHTML = "<strong>"+products.length+"</strong> produit(s)";
+});
+</script><script src="products.js"></script>
+<script src="search.js"></script>
+<script>
+function openMenu(){document.getElementById('dropdownMenu').classList.add('active');document.getElementById('menuOverlay').classList.add('active');document.body.style.overflow='hidden';}
+function closeMenu(){document.getElementById('dropdownMenu').classList.remove('active');document.getElementById('menuOverlay').classList.remove('active');document.body.style.overflow='';}
+function toggleSearch(){const bar=document.getElementById('searchBar');bar.classList.toggle('open');if(bar.classList.contains('open'))document.getElementById('searchInput').focus();else{document.getElementById('searchResults').innerHTML='';document.getElementById('searchInput').value='';}}
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livres & Registres — ETS Mahamat Al Amine Adam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<header class="header">
+  <div class="top-bar">
+    <button class="menu-btn" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+    <div class="logo">
+      <div class="logo-fallback">ETS</div>
+      <span>ETS MAHAMAT AL AMINE ADAM</span>
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <span class="search-icon-inner"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" id="searchInput" placeholder="Rechercher un produit, une marque...">
+  </div>
+  <div id="searchResults"></div>
+</header>
+<nav class="dropdown-menu" id="dropdownMenu">
+  <div class="menu-header">
+    <div class="menu-logo"><div class="menu-logo-badge">ETS</div><span>ETS MAHAMAT<br>AL AMINE ADAM</span></div>
+    <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul>
+    <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span>Accueil</a></li>
+    <li><a href="ordinateurs.html"><span class="nav-icon"><i class="fa-solid fa-laptop"></i></span>Ordinateurs</a></li>
+    <li><a href="imprimantes.html"><span class="nav-icon"><i class="fa-solid fa-print"></i></span>Imprimantes</a></li>
+    <li><a href="fournitures.html"><span class="nav-icon"><i class="fa-solid fa-pencil"></i></span>Fournitures Scolaires</a></li>
+    <li><a href="accessoires.html"><span class="nav-icon"><i class="fa-solid fa-computer-mouse"></i></span>Accessoires</a></li>
+    <li><a href="registres.html" class="active-link"><span class="nav-icon"><i class="fa-solid fa-book"></i></span>Livres &amp; Registres</a></li>
+    <li><a href="contacts.html"><span class="nav-icon"><i class="fa-solid fa-phone"></i></span>Contact</a></li>
+  </ul>
+  <div class="menu-social">
+    <a href="https://facebook.com/Ibrahim%20Mahamat%20Al%20Amine" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/ibra.alamine7" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com/add/ibra_alamine7" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+    <a href="https://wa.me/23566322486" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Livres &amp; Registres</span></div>
+  <div class="page-title-main">Livres &amp; Registres</div>
+  <div class="page-subtitle">Scolaires, romans, registres bureautiques</div>
+</div>
+<div class="filter-bar">
+  <span class="filter-chip active" onclick="filterBrand('all',this)"><i class="fa-solid fa-list" style="font-size:10px;"></i> Tous</span>
+  <span class="filter-chip" onclick="filterBrand('livre',this)">Livres scolaires</span>
+  <span class="filter-chip" onclick="filterBrand('roman',this)">Romans</span>
+  <span class="filter-chip" onclick="filterBrand('registre',this)">Registres</span>
+</div>
+<div class="product-count" id="productCount"></div>
+<div class="products-list">
+  <a href="produit.html?name=Livre%20de%20Math%C3%A9matiques&price=8000&img=images/livre-math.jfif&desc=Secondaire%2C%20programme%20complet&cat=livre&brand=Hachette" class="product-card product-card-item" data-brand="livre">
+    <div class="product-img-wrap">
+      <img src="images/livre-math.jfif" alt="Livre de Mathématiques" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">HACHETTE</div>
+      <div class="product-name">Livre de Mathématiques</div>
+      <div class="product-specs">Secondaire, programme complet</div>
+      <div class="product-footer">
+        <div class="product-price">8 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Livre%20de%20Fran%C3%A7ais&price=7000&img=images/livre-francais.jfif&desc=Grammaire%20et%20conjugaison&cat=livre&brand=Hachette" class="product-card product-card-item" data-brand="livre">
+    <div class="product-img-wrap">
+      <img src="images/livre-francais.jfif" alt="Livre de Français" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">HACHETTE</div>
+      <div class="product-name">Livre de Français</div>
+      <div class="product-specs">Grammaire et conjugaison</div>
+      <div class="product-footer">
+        <div class="product-price">7 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Livre%20d%27Anglais&price=7500&img=images/livre-anglais.jfif&desc=D%C3%A9butant%20%C3%A0%20interm%C3%A9diaire&cat=livre&brand=Oxford" class="product-card product-card-item" data-brand="livre">
+    <div class="product-img-wrap">
+      <img src="images/livre-anglais.jfif" alt="Livre d'Anglais" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">OXFORD</div>
+      <div class="product-name">Livre d'Anglais</div>
+      <div class="product-specs">Débutant à intermédiaire</div>
+      <div class="product-footer">
+        <div class="product-price">7 500<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Roman%20inspirant&price=6000&img=images/roman.jfif&desc=Lecture%20g%C3%A9n%C3%A9rale%2C%20histoire%20inspirante&cat=livre&brand=Generic" class="product-card product-card-item" data-brand="roman">
+    <div class="product-img-wrap">
+      <img src="images/roman.jfif" alt="Roman inspirant" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Roman inspirant</div>
+      <div class="product-specs">Lecture générale, histoire inspirante</div>
+      <div class="product-footer">
+        <div class="product-price">6 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Registre%20Comptable&price=5000&img=images/registre-comptable.jfif&desc=Grand%20format%20pour%20usage%20bureau&cat=livre&brand=Generic" class="product-card product-card-item" data-brand="registre">
+    <div class="product-img-wrap">
+      <img src="images/registre-comptable.jfif" alt="Registre Comptable" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Registre Comptable</div>
+      <div class="product-specs">Grand format pour usage bureau</div>
+      <div class="product-footer">
+        <div class="product-price">5 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Registre%20de%20Pr%C3%A9sence&price=4000&img=images/registre-presence.jfif&desc=Pour%20%C3%A9coles%20et%20entreprises&cat=livre&brand=Generic" class="product-card product-card-item" data-brand="registre">
+    <div class="product-img-wrap">
+      <img src="images/registre-presence.jfif" alt="Registre de Présence" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">📚</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Registre de Présence</div>
+      <div class="product-specs">Pour écoles et entreprises</div>
+      <div class="product-footer">
+        <div class="product-price">4 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+</div><footer class="footer">
+  <div class="footer-logo">ETS MAHAMAT AL AMINE ADAM</div>
+  <div class="footer-sub">Informatique &amp; Fournitures — N'Djamena, Tchad</div>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a><a href="ordinateurs.html">Ordinateurs</a><a href="imprimantes.html">Imprimantes</a><a href="accessoires.html">Accessoires</a><a href="contacts.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2025 ETS Mahamat Al Amine Adam. Tous droits réservés.</div>
+</footer><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const products = document.querySelectorAll(".product-card-item");
+  window.filterBrand = function(brand, el) {
+    document.querySelectorAll(".filter-chip").forEach(b=>b.classList.remove("active"));
+    if(el) el.classList.add("active");
+    let count=0;
+    products.forEach(p=>{
+      const show = brand==="all"||p.dataset.brand===brand;
+      p.style.display = show?"":"none";
+      if(show) count++;
+    });
+    document.getElementById("productCount").innerHTML = "<strong>"+count+"</strong> produit(s) trouvé(s)";
+  };
+  document.getElementById("productCount").innerHTML = "<strong>"+products.length+"</strong> produit(s)";
+});
+</script><script src="products.js"></script>
+<script src="search.js"></script>
+<script>
+function openMenu(){document.getElementById('dropdownMenu').classList.add('active');document.getElementById('menuOverlay').classList.add('active');document.body.style.overflow='hidden';}
+function closeMenu(){document.getElementById('dropdownMenu').classList.remove('active');document.getElementById('menuOverlay').classList.remove('active');document.body.style.overflow='';}
+function toggleSearch(){const bar=document.getElementById('searchBar');bar.classList.toggle('open');if(bar.classList.contains('open'))document.getElementById('searchInput').focus();else{document.getElementById('searchResults').innerHTML='';document.getElementById('searchInput').value='';}}
+</script>
+</body>
+</html>

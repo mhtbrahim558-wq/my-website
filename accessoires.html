@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessoires — ETS Mahamat Al Amine Adam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<header class="header">
+  <div class="top-bar">
+    <button class="menu-btn" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+    <div class="logo">
+      <div class="logo-fallback">ETS</div>
+      <span>ETS MAHAMAT AL AMINE ADAM</span>
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <span class="search-icon-inner"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" id="searchInput" placeholder="Rechercher un produit, une marque...">
+  </div>
+  <div id="searchResults"></div>
+</header>
+<nav class="dropdown-menu" id="dropdownMenu">
+  <div class="menu-header">
+    <div class="menu-logo"><div class="menu-logo-badge">ETS</div><span>ETS MAHAMAT<br>AL AMINE ADAM</span></div>
+    <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul>
+    <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span>Accueil</a></li>
+    <li><a href="ordinateurs.html"><span class="nav-icon"><i class="fa-solid fa-laptop"></i></span>Ordinateurs</a></li>
+    <li><a href="imprimantes.html"><span class="nav-icon"><i class="fa-solid fa-print"></i></span>Imprimantes</a></li>
+    <li><a href="fournitures.html"><span class="nav-icon"><i class="fa-solid fa-pencil"></i></span>Fournitures Scolaires</a></li>
+    <li><a href="accessoires.html" class="active-link"><span class="nav-icon"><i class="fa-solid fa-computer-mouse"></i></span>Accessoires</a></li>
+    <li><a href="registres.html"><span class="nav-icon"><i class="fa-solid fa-book"></i></span>Livres &amp; Registres</a></li>
+    <li><a href="contacts.html"><span class="nav-icon"><i class="fa-solid fa-phone"></i></span>Contact</a></li>
+  </ul>
+  <div class="menu-social">
+    <a href="https://facebook.com/Ibrahim%20Mahamat%20Al%20Amine" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/ibra.alamine7" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com/add/ibra_alamine7" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+    <a href="https://wa.me/23566322486" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Accessoires</span></div>
+  <div class="page-title-main">Accessoires</div>
+  <div class="page-subtitle">USB, souris, claviers, cartouches & toners</div>
+</div>
+<div class="filter-bar">
+  <span class="filter-chip active" onclick="filterBrand('all',this)"><i class="fa-solid fa-list" style="font-size:10px;"></i> Tous</span>
+  <span class="filter-chip" onclick="filterBrand('ordinateur',this)">Ordinateur</span>
+  <span class="filter-chip" onclick="filterBrand('imprimante',this)">Imprimante</span>
+</div>
+<div class="product-count" id="productCount"></div>
+<div class="products-list">
+  <a href="produit.html?name=Cl%C3%A9%20USB%20Kingston%20128GB&price=8000&img=images/usb128gb.jfif&desc=USB%203.0%2C%20haute%20vitesse&cat=accessoire&brand=Kingston" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/usb128gb.jfif" alt="Clé USB Kingston 128GB" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">KINGSTON</div>
+      <div class="product-name">Clé USB Kingston 128GB</div>
+      <div class="product-specs">USB 3.0, haute vitesse</div>
+      <div class="product-footer">
+        <div class="product-price">8 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Disque%20Dur%201TB&price=55000&img=images/1tbdisquedur.jfif&desc=Disque%20dur%20portable%2C%20USB%203.0&cat=accessoire&brand=Seagate" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/1tbdisquedur.jfif" alt="Disque Dur 1TB" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">SEAGATE</div>
+      <div class="product-name">Disque Dur 1TB</div>
+      <div class="product-specs">Disque dur portable, USB 3.0</div>
+      <div class="product-footer">
+        <div class="product-price">55 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Souris%20Logitech%20M90&price=5000&img=images/sourislogitechm90.jfif&desc=Souris%20filaire%20USB&cat=accessoire&brand=Logitech" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/sourislogitechm90.jfif" alt="Souris Logitech M90" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">LOGITECH</div>
+      <div class="product-name">Souris Logitech M90</div>
+      <div class="product-specs">Souris filaire USB</div>
+      <div class="product-footer">
+        <div class="product-price">5 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Souris%20HP%20280&price=5000&img=images/sourishp280.jpg&desc=Souris%20ergonomique%20filaire&cat=accessoire&brand=HP" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/sourishp280.jpg" alt="Souris HP 280" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">HP</div>
+      <div class="product-name">Souris HP 280</div>
+      <div class="product-specs">Souris ergonomique filaire</div>
+      <div class="product-footer">
+        <div class="product-price">5 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Casque%20Audio&price=12000&img=images/casques.jfif&desc=Casque%20avec%20micro%2C%20jack%203.5mm&cat=accessoire&brand=Generic" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/casques.jfif" alt="Casque Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Casque Audio</div>
+      <div class="product-specs">Casque avec micro, jack 3.5mm</div>
+      <div class="product-footer">
+        <div class="product-price">12 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Clavier%20Filaire%20USB&price=12000&img=images/clavier.png&desc=Clavier%20AZERTY%20avec%20pav%C3%A9%20num%C3%A9rique&cat=accessoire&brand=Generic" class="product-card product-card-item" data-brand="ordinateur">
+    <div class="product-img-wrap">
+      <img src="images/clavier.png" alt="Clavier Filaire USB" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">GENERIC</div>
+      <div class="product-name">Clavier Filaire USB</div>
+      <div class="product-specs">Clavier AZERTY avec pavé numérique</div>
+      <div class="product-footer">
+        <div class="product-price">12 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Cartouche%20Canon%20545&price=18000&img=images/cartouchecanon545.jfif&desc=Cartouche%20noire%20pour%20Canon%20PIXMA&cat=accessoire&brand=Canon" class="product-card product-card-item" data-brand="imprimante">
+    <div class="product-img-wrap">
+      <img src="images/cartouchecanon545.jfif" alt="Cartouche Canon 545" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">CANON</div>
+      <div class="product-name">Cartouche Canon 545</div>
+      <div class="product-specs">Cartouche noire pour Canon PIXMA</div>
+      <div class="product-footer">
+        <div class="product-price">18 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Cartouche%20HP%20305&price=18000&img=images/cartouchehp305.jfif&desc=Cartouche%20HP%20noir%20et%20couleur&cat=accessoire&brand=HP" class="product-card product-card-item" data-brand="imprimante">
+    <div class="product-img-wrap">
+      <img src="images/cartouchehp305.jfif" alt="Cartouche HP 305" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">HP</div>
+      <div class="product-name">Cartouche HP 305</div>
+      <div class="product-specs">Cartouche HP noir et couleur</div>
+      <div class="product-footer">
+        <div class="product-price">18 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+  <a href="produit.html?name=Toner%20HP%20206A&price=45000&img=images/hptoner206a.jfif&desc=Toner%20LaserJet%20haute%20capacit%C3%A9&cat=accessoire&brand=HP" class="product-card product-card-item" data-brand="imprimante">
+    <div class="product-img-wrap">
+      <img src="images/hptoner206a.jfif" alt="Toner HP 206A" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="product-emoji" style="display:none;">🖱️</div><span class="product-badge new">Pro</span>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">HP</div>
+      <div class="product-name">Toner HP 206A</div>
+      <div class="product-specs">Toner LaserJet haute capacité</div>
+      <div class="product-footer">
+        <div class="product-price">45 000<small>FCFA</small></div>
+        <span class="btn-order"><i class="fab fa-whatsapp" style="font-size:12px;"></i> Commander</span>
+      </div>
+    </div>
+  </a>
+</div><footer class="footer">
+  <div class="footer-logo">ETS MAHAMAT AL AMINE ADAM</div>
+  <div class="footer-sub">Informatique &amp; Fournitures — N'Djamena, Tchad</div>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a><a href="ordinateurs.html">Ordinateurs</a><a href="imprimantes.html">Imprimantes</a><a href="accessoires.html">Accessoires</a><a href="contacts.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2025 ETS Mahamat Al Amine Adam. Tous droits réservés.</div>
+</footer><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const products = document.querySelectorAll(".product-card-item");
+  window.filterBrand = function(brand, el) {
+    document.querySelectorAll(".filter-chip").forEach(b=>b.classList.remove("active"));
+    if(el) el.classList.add("active");
+    let count=0;
+    products.forEach(p=>{
+      const show = brand==="all"||p.dataset.brand===brand;
+      p.style.display = show?"":"none";
+      if(show) count++;
+    });
+    document.getElementById("productCount").innerHTML = "<strong>"+count+"</strong> produit(s) trouvé(s)";
+  };
+  document.getElementById("productCount").innerHTML = "<strong>"+products.length+"</strong> produit(s)";
+});
+</script><script src="products.js"></script>
+<script src="search.js"></script>
+<script>
+function openMenu(){document.getElementById('dropdownMenu').classList.add('active');document.getElementById('menuOverlay').classList.add('active');document.body.style.overflow='hidden';}
+function closeMenu(){document.getElementById('dropdownMenu').classList.remove('active');document.getElementById('menuOverlay').classList.remove('active');document.body.style.overflow='';}
+function toggleSearch(){const bar=document.getElementById('searchBar');bar.classList.toggle('open');if(bar.classList.contains('open'))document.getElementById('searchInput').focus();else{document.getElementById('searchResults').innerHTML='';document.getElementById('searchInput').value='';}}
+</script>
+</body>
+</html>
